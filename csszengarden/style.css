@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Kalam');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 
+@import url(http://allfont.net/allfont.css?fonts=a_lcdnova);
+@import url(http://allfont.net/allfont.css?fonts=perfo);
+@import url(http://allfont.net/allfont.css?fonts=dexterc);
+
+
+
 body{
 	background-color: #00d4a1b0;
 }
@@ -11,21 +17,22 @@ header{
     color: #c113de;
     font-style: oblique;
     text-align: center;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Perfo', arial;
+    /*font-family: 'Satisfy', cursive;*/
     	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 
-h3,p{
-		-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+h3{
+		-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
 }
 
 li{
-		-webkit-animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	        animation: text-focus-in 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+		-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
 }
 a:hover{
@@ -40,23 +47,31 @@ a:hover{
 }
 
 h3{
+	font-family: 'a_LCDNova', arial;
+	font-size: 25px;
+}
+p{
+	font-family: 'DexterC', arial;
+}
+/*h3{
 	font-family: 'Indie Flower', cursive;
 	font-size: 25px;
 }
 p{
 	font-family: 'Kalam', cursive;
+}*/
+.main div:hover{
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+
 }
 
-div{
-	/*margin-top: 40px;*/
-
-}
 .summary{
 	border-style: solid;
     border-color: #f7dc00;
     background-color: #f403a2;
-    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	text-align: center;
 	color: gold;
 	margin-bottom: 10px;
@@ -64,41 +79,42 @@ div{
 
 .preamble{
 	border-style: solid;
-    border-color: lime;
-    background-color: hotpink;
-    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-color: #4d00ff;
+    color: #4d00ff;
+    background-color: #98ff22;
+		-webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	width: 400px;
-	margin-left: 40px;
+	left: 460px;
 	position: absolute;
 
 }
-.preamble p:hover{
-	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-	        animation: heartbeat 1.5s ease-in-out infinite both;
-
-}
-
-	
 
 .explanation{
 	border-style: solid;
     border-color: lime;
     background-color: darkorange;
-    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	width: 400px;
-	margin-left: 460px;
+	left: 460px;
+	top: 850px;
 	position: absolute;
 }
+.explanation:focus{
+		-webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
 .participation{
 	border-style: solid;
     border-color: lime;
     background-color: darkviolet;
-    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	width: 400px;
-	margin-left: 880px;
+		-webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	width: 800px;
+	top: 1350px;
 	position: absolute;
 }
 
@@ -106,27 +122,71 @@ div{
 	border-style: solid;
     border-color: lime;
     background-color: red;
-    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	position: absolute;
-	margin-top: 600px;
-	width: 800px;
+	top: 950px;
+	left: 30px;
+	width: 400px;
 }
 .requirements{
 	border-style: solid;
     border-color: lime;
     background-color: yellow;
-    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	position: absolute;
-	margin-top: 800px;
-	width: 1200px;
-	margin-left: 130px;
-	text-align: right;
+	left: 880px;
+	width: 400px;
+	-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-.main div:hover{
-			-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
-	        animation: heartbeat 1.5s ease-in-out infinite both;
+
+.design-selection{
+	border-style: solid;
+    border-color: lime;
+    background-color: skyblue;
+	    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	position: absolute;
+	left: 20px;
+	top: 460px;
+	width: 400px;
+}
+.design-archives{
+	border-style: solid;
+    border-color: lime;
+    background-color: gold;
+	    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	position: absolute;
+	width: 200px;
+	top: 720px;
+	left: 20px;
+}
+.zen-resources{
+	border-style: solid;
+    border-color: lime;
+    background-color: magenta;
+	    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	position: absolute;
+	width: 200px;
+	top: 720px;
+	left: 230px;
+}
+
+
+footer{
+			-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	background-color: pink;
+	width: 400px;
+	border-style: solid;
+	border-color: lime;
+	position: absolute;
+	left: 20px;
+	text-align: center;
+	/*top: 690px;*/
+	
 }
 
 
@@ -465,5 +525,132 @@ div{
             transform: scale(1);
     -webkit-animation-timing-function: ease-out;
             animation-timing-function: ease-out;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-1-24 12:35:19
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-fwd-center
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+  100% {
+    -webkit-transform: translateZ(160px);
+            transform: translateZ(160px);
+  }
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2019-1-24 12:41:43
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-1-24 12:43:0
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2019-1-24 12:44:34
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -2,19 +2,23 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Kalam');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Orbitron|VT323');
+
 
 body{
-	background-color: #00d4a1b0;
+	background-color: #000000;
 }
 
 header{
     font-size: 40px;
-    color: #c113de;
+    color: #ff5e00;
     font-style: oblique;
     text-align: center;
-    font-family: 'Satisfy', cursive;
+    /*font-family: 'Satisfy', cursive;*/
+    font-family: 'VT323', monospace;
     	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both; 
 }
 
 
@@ -29,152 +33,191 @@ li{
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 
 }
-a:hover{
-	background-color: lime;
-}
 
-.design-name:hover{
-	background-color: red;
-}
-.designer-name:hover{
-	background-color: gold;
+a:hover{
+	color: white;
 }
 
 h3{
-	font-family: 'Indie Flower', cursive;
+	/*font-family: 'Indie Flower', cursive;*/
+	font-family: 'Orbitron', sans-serif;
 	font-size: 25px;
 }
 p{
-	font-family: 'Kalam', cursive;
+	/*font-family: 'Kalam', cursive;*/
+	font-family: 'VT323', monospace;
+	font-size: 20px;
+	opacity: 1;
+
 }
-.main div:hover{
+a{
+	color: darkviolet;
+	font-family: 'VT323', monospace;
+}
+abbr:hover{
+	/*color: #ff5e00;*/
+	color: brown;
+}
+p:hover{
 	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	        animation: heartbeat 1.5s ease-in-out infinite both;
+	        opacity: 0.75;
 
 }
 
 .summary{
+	background-color: black;
 	border-style: solid;
-    border-color: #f7dc00;
-    background-color: #f403a2;
-	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    border-color: #f403a2;
+    color: #f403a2;
+	-webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	text-align: center;
-	color: gold;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .preamble{
 	border-style: solid;
-    border-color: #4d00ff;
-    color: #4d00ff;
-    background-color: #98ff22;
+	background-color: black;
+    border-color: yellow;
+    color: yellow;
 		-webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	width: 400px;
-	left: 460px;
+	left: 480px;
 	position: absolute;
 
 }
 
 .explanation{
 	border-style: solid;
-    border-color: lime;
-    background-color: darkorange;
+	background-color: black;
+    border-color: #2196f3;
+    color: #2196f3;
+
 	-webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	width: 400px;
-	left: 460px;
-	top: 850px;
+	left: 480px;
+	top: 830px;
 	position: absolute;
-}
-.explanation:focus{
-		-webkit-animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
 .participation{
 	border-style: solid;
-    border-color: lime;
-    background-color: darkviolet;
-		-webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	background-color: black;
+    border-color: orange;
+    color: orange;
+
+		-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	width: 800px;
-	top: 1350px;
+	top: 1300px;
 	position: absolute;
 }
 
 .benefits{
-	border-style: solid;
-    border-color: lime;
-    background-color: red;
-    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-style: solid;
+	background-color: black;
+    border-color: white;
+    color: white;
+
+    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	position: absolute;
 	top: 950px;
 	left: 30px;
 	width: 400px;
 }
 .requirements{
-	border-style: solid;
+    border-style: solid;
+	background-color: black;
     border-color: lime;
-    background-color: yellow;
+    color: lime;
+
 	position: absolute;
-	left: 880px;
+	left: 920px;
 	width: 400px;
-	-webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	-webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .design-selection{
+	background-color: black;
 	border-style: solid;
-    border-color: lime;
-    background-color: skyblue;
+    border-color: red;
+    color: red;
+
 	    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	position: absolute;
-	left: 20px;
+	left: 40px;
 	top: 460px;
 	width: 400px;
 }
+.design-selection a{
+    color: red;
+}
+.design-selection a:hover{
+    color: white;
+
+}
 .design-archives{
+	background-color: black;
 	border-style: solid;
-    border-color: lime;
-    background-color: gold;
-	    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-color: magenta;
+    color: magenta;
+	    -webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	position: absolute;
 	width: 200px;
-	top: 720px;
+	top: 730px;
 	left: 20px;
 }
+.design-archives a{
+    color: magenta;
+}
+.design-archives a:hover{
+    color: white;
+}
 .zen-resources{
+	background-color: black;
 	border-style: solid;
-    border-color: lime;
-    background-color: magenta;
-	    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-color: aqua;
+    color: aqua;
+	    -webkit-animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	position: absolute;
 	width: 200px;
-	top: 720px;
-	left: 230px;
+	top: 730px;
+	left: 250px;
+}
+.zen-resources a{
+    color: aqua;
+}
+.zen-resources a:hover{
+    color: white;
 }
 
 
 footer{
+	background-color: black;
+	border-style: solid;
+	border-color: darkviolet;
+	color: darkviolet;
 			-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-	background-color: pink;
 	width: 400px;
-	border-style: solid;
-	border-color: lime;
+
 	position: absolute;
-	left: 20px;
+	left: 40px;
+	font-size: 25px;
 	text-align: center;
 	/*top: 690px;*/
 	
 }
+
 
 
 
@@ -515,36 +558,6 @@ footer{
   }
 }
 
-/* ----------------------------------------------
- * Generated by Animista on 2019-1-24 12:35:19
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-/**
- * ----------------------------------------
- * animation slide-fwd-center
- * ----------------------------------------
- */
-@-webkit-keyframes slide-fwd-center {
-  0% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-  100% {
-    -webkit-transform: translateZ(160px);
-            transform: translateZ(160px);
-  }
-}
-@keyframes slide-fwd-center {
-  0% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-  100% {
-    -webkit-transform: translateZ(160px);
-            transform: translateZ(160px);
-  }
-}
 /* ----------------------------------------------
  * Generated by Animista on 2019-1-24 12:41:43
  * w: http://animista.net, t: @cssanimista

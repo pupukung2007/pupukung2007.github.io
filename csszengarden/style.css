@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower|Kalam');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 
-@import url(http://allfont.net/allfont.css?fonts=a_lcdnova);
-@import url(http://allfont.net/allfont.css?fonts=perfo);
-@import url(http://allfont.net/allfont.css?fonts=dexterc);
-
-
 
 body{
 	background-color: #00d4a1b0;
@@ -17,8 +12,7 @@ header{
     color: #c113de;
     font-style: oblique;
     text-align: center;
-    font-family: 'Perfo', arial;
-    /*font-family: 'Satisfy', cursive;*/
+    font-family: 'Satisfy', cursive;
     	-webkit-animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
@@ -47,19 +41,12 @@ a:hover{
 }
 
 h3{
-	font-family: 'a_LCDNova', arial;
-	font-size: 25px;
-}
-p{
-	font-family: 'DexterC', arial;
-}
-/*h3{
 	font-family: 'Indie Flower', cursive;
 	font-size: 25px;
 }
 p{
 	font-family: 'Kalam', cursive;
-}*/
+}
 .main div:hover{
 	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	        animation: heartbeat 1.5s ease-in-out infinite both;

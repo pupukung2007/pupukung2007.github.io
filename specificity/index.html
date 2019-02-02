@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS Specificity</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="basic-style1.css">
+	<link rel="stylesheet" type="text/css" href="basic-style2.css">
+	<link rel="stylesheet" type="text/css" href="step1.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<div class="background">
+		<div class="grid-container">
+			<div></div>
+			<header>
+				<h1>CSS Specificity</h1>
+				<h2>- Which Rule for the element</h2>
+			</header>
+			<div></div>
+			<div></div>
+		</div>
+	
+		<div class="grid-container">
+			<div class="intro">
+				<h3>What is a CSS specification?</h3>
+				<p>CSS specification is the way HTML choose which CSS rules in the .css stylesheets to apply to an 	element </p>
+			</div>
+			<div class="explaination">
+				<h3>How does it work?</h3>
+				<p>
+					Suppose you have multiple css stylesheet linked to a HTML page. <br>
+					The HTML will load the stylesheets from top to bottom by the order of written. <br>
+					Then, if any <q>same</q> CSS selector exists in multiple stylesheets, <br>
+				The HTML will override the value of the properties with the <q class="keyword">latest</q> loaded 		stylesheet and apply it.  
+				</p>
+			</div>
+			<div class="example">
+					<h3>A basic example</h3>
+					<a href="" class="button1">Button1</a> <a href="" class="button2">Button2</a>
+					<p>From above buttons, Button1 element uses .button1 CSS selector <br>
+					and Button2 element uses .button2 CSS selector <br>
+					These buttons are linked by 2 stylesheets, basic-style1.css and basic.style2.css, respectively.
+				</p>
+			</div>
+			
+			<div></div>
+		</div>
+
+		<div class="grid-container">
+			<div></div>
+			<div></div>
+			<div class="basic-code1">
+				<p>/*basic-style1.css*/<br> 	
+					.button1{ <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;border-style: solid; <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;background-color: blue; <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;color:red; <br>
+					}<br>
+					.button2{<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;background-color: lime;<br>
+					}<br>
+				</p>
+			</div>
+
+		</div>	
+		
+		<div class="grid-container">
+			<div class="step2">
+				<h3>And...Next?</h3>
+				<p>
+					<a href="" class="button1">Button1</a> <a href="" class="button2">Button2</a><br>
+					The HTML load basic-style2.css, <br>
+					which include a yellow background for Button1, and a border for Button2. <br>
+					Since Button1 already has a "blue" background from basic-style1.css, <br> 
+					It will be replaced with the "yellow" background from basic-style2.css. <br>
+					And since Button2 has no border-style property defined in basic-style1.css,<br>
+					The basic-style2.css will give Button2 its border. <br>
+					
+				</p>
+			</div>
+			<div class="step1">
+				<h3>So ... What Happened?</h3>
+				<p>
+					<a href="" class="step1-button1">Button1</a> <a href="" class="step1-button2">Button2</a><br>
+					First, The HTML load basic-style1.css, <br>
+					Giving Button1 a border, blue background, and red font. <br>
+					It also give Button2 a lime(green) background. <br>
+					
+				</p>
+			</div>
+			<div class="basic-code2">
+				<p>/*basic-style2.css*/<br> 	
+				.button1{<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow;<br>
+				}<br>
+				.button2{<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;border-style: solid;<br>
+				}<br></p>
+			</div>
+
+			
+		</div>
+				
+		
+	
+	
+		
+	
+	
+		
+	
+		<div class="copyright">
+			<h3>Credit</h3>
+			<p>The background images are from <a href="https://pixabay.com/">Pixabay.com</a> <br>
+			Who provides free images under Pixabay's own license. <br>
+			<a href="https://pixabay.com/th/service/license/">Read more</a>
+			</p>
+		</div>
+	</div>
+
+	
+</body>
+</html>

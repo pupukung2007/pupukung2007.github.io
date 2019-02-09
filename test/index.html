@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Data List</title>
+    <link rel="stylesheet" href="bulma-0.7.2/css/bulma.min.css">
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">-->
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="level">
+                <div class="level-item">
+                    <div class="field is-horizontal">
+                        <div class="field-label is-normal">
+                            <label class="label" for="input-text">
+                                <i class="fas fa-search">Search</i>
+                            </label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <p class="control">
+                                    <input class="input is-rounded" type="text" id="input-text"
+                                        placeholder="Search for...">
+                                </p>
+                            </div>
+
+                            <div class="control">
+                                <button id="search-btn" class="button is-primary">
+                                    Search
+                                </button>
+                            </div>
+                            <div>&nbsp;</div>
+                            <div class="control">
+                                <button id="advanced-btn" class="button is-danger">
+                                    Advanced Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Advanced Search-->
+    <section class="section advanced-search" style="display : none;">
+        <div class="container">
+            <div class="level">
+                <div class="level-item">
+                    <div class="field is-horizontal">
+
+                        <div class="field-label is-normal">
+                            <label class="label" for="input-id">
+                                ID:
+                            </label>
+                        </div>
+
+                        <div class="field">
+                            <p class="control">
+                                <input class="input is-rounded" type="text" id="input-id"
+                                    placeholder="Search using ID...">
+                            </p>
+                        </div>
+
+                        <div class="field-label is-normal">
+                            <label class="label" for="input-name">
+                                Name:
+                            </label>
+                        </div>
+                        <div class="field">
+                            <p class="control">
+                                <input class="input is-rounded" type="text" id="input-name"
+                                    placeholder="Search using Name...">
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="field is-horizontal">
+                <!--Type1 Dropdown-->
+                <div class="label is-normal">
+                    <label class="label" for="dropdown-type1">
+                        Type1:
+                    </label>
+                </div>
+
+                <div class="dropdown is-active" id="dropdown-type1">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Dropdown button</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu" style="display:none;">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                Normal
+                            </a>
+                            <a class="dropdown-item">
+                                Fire
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Fighting
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Water
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Flying
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--Type2 Dropdown-->
+                <div class="label is-normal">
+                    <label class="label" for="dropdown-type2">
+                        &nbsp;&nbsp;&nbsp;&nbsp;Type2:&nbsp;&nbsp;&nbsp;&nbsp;
+                    </label>
+                </div>
+                <div class="dropdown is-active">
+                    <div class="dropdown-trigger">
+                        <button class="button" id="dropdown-type2" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span id="type2-display">None</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content" id="type2-content">
+                            <a href="#" class="dropdown-item type2-item">
+                                None
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Normal
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Fire
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Fighting
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Water
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Flying
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Grass
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Poison
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Electric
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Ground
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Psychic
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Rock
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Ice
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Bug
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Dragon
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Ghost
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Dark
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Steel
+                            </a>
+                            <a href="#" class="dropdown-item type2-item">
+                                Fairy
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+    <section class="section">
+        <table class="table" id="pokemon-table">
+            <thead id="pokemon-head">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type1</th>
+                <th>Type2</th>
+                <th>Total Stat</th>
+                <th>HP</th>
+                <th>Attack</th>
+                <th>Defense</th>
+                <th>Sp.Attack</th>
+                <th>Sp.Defense</th>
+                <th>Speed</th>
+                <th>Generation</th>
+                <th>Legendary?</th>
+            </thead>
+            <tbody id="pokemon-body">
+            </tbody>
+        </table>
+    </section>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="myscript.js"></script>
+</body>
+
+</html>

@@ -24,10 +24,74 @@ $(document).ready(function() {
             }
         });
     });
+    
 
     $('#advanced-btn').click(function() {
         $(".advanced-search").toggle();
-        $(".dropdown-content").hide();
+        $(".dropdown-menu").hide();
+    });
+
+    $('#filter-btn').click(function() {
+        var id = $("#input-id").val();
+        var name = $("#input-name").val().toLowerCase();
+        var type1= $("#dropdown-type1").text();
+        var type2= $("#dropdown-type2").text();
+        var total = $("#input-total").val();
+        var hp = $("#input-hp").val();
+        var attack = $("#input-attack").val();
+        var defense = $("#input-defense").val();
+        var spattack = $("#input-sp-attack").val();
+        var spdefense = $("#input-sp-defense").val();
+        var speed = $("#input-speed").val();
+        var generation = $("#input-generation").val();
+        var legendary = $("#input-legendary").text();
+
+        /*console.log(id,name,type1,type2,total,hp,attack,defense,spattack,spdefense,speed,generation,legendary);*/
+        
+        $("#pokemon-body tr").filter(function() {
+            var data = $(this).text().split('\n');
+            data[1] = data[1].toLowerCase();
+            if(id == '' && name == '' && type1 == 'Not Specified' && type2 == 'Not Specified' && total == '' && attack =='' 
+            && defense =='' && spattack == '' && spdefense == '' && speed == '' && generation == '' && legendary == 'Not Specified'){
+                $(this).show();
+            }
+            else{
+                if(type1 == 'Not Specified'){
+                    type1 = '';
+                }
+                if(type2 == 'Not Specified'){
+                    type2 = '';
+                }
+                if(legendary == 'Not Specified'){
+                    legendary = '';
+                }
+                
+                if(data[0].indexOf(id) || data[1].indexOf(name)  
+                || data[2].indexOf(type1) || data[3].indexOf(type2) || data[4].indexOf(total)
+                || data[5].indexOf(hp) || data[6].indexOf(attack) || data[7].indexOf(defense)
+                || data[8].indexOf(spattack) || data[9].indexOf(spdefense) || data[10].indexOf(speed)
+                || data[11].indexOf(generation) || data[12].indexOf(legendary)  == -1){
+                    $(this).hide();
+                }
+                else{
+                   $(this).show();
+                }
+                console.log(data[0].indexOf(id) , data[1].indexOf(name)  
+                , data[2].indexOf(type1) , data[3].indexOf(type2) , data[4].indexOf(total)
+                , data[5].indexOf(hp) , data[6].indexOf(attack) , data[7].indexOf(defense)
+                ,data[8].indexOf(spattack) , data[9].indexOf(spdefense) , data[10].indexOf(speed)
+                , data[11].indexOf(generation) ,data[12].indexOf(legendary));
+                
+            }   
+            
+            /*console.log(data[0]);*/
+            /*if($(this).text().toLowerCase().indexOf(word) != -1){
+                $(this).show();
+            }
+            else{
+                $(this).hide();
+            }*/
+        });
     });
 
     
@@ -35,14 +99,29 @@ $(document).ready(function() {
         $("#type1-content").toggle();
     });
 
+    $('.type1-item').click(function() {
+        $("#dropdown-type1").text($(this).text());
+        $("#type1-content").toggle();
+    });
+
     $('#dropdown-type2').click(function() {
         $("#type2-content").toggle();
     });
+
     $('.type2-item').click(function() {
-        $("#type2-display").text($(this).text());
+        $("#dropdown-type2").text($(this).text());
         $("#type2-content").toggle();
     });
-    
+
+    $('#input-legendary').click(function() {
+        $("#legendary-content").toggle();
+    });
+    $('.legendary-item').click(function() {
+        $('#input-legendary').text($(this).text());
+        $("#legendary-content").toggle();
+    });
+
+
     
 
     $.ajax({

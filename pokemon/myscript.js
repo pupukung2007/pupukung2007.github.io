@@ -29,6 +29,20 @@ $(document).ready(function() {
     $('#advanced-btn').click(function() {
         $(".advanced-search").toggle();
         $(".dropdown-menu").hide();
+        
+        $("#input-id").val("");
+        $("#input-name").val("");
+        $("#dropdown-type1").text("Not Specified");
+        $("#dropdown-type2").text("Not Specified");
+        $("#input-total").val("");
+        $("#input-hp").val("");
+        $("#input-attack").val("");
+        $("#input-defense").val("");
+        $("#input-sp-attack").val("");
+        $("#input-sp-defense").val("");
+        $("#input-speed").val("");
+        $("#input-generation").val("");
+        $("#input-legendary").text("Not Specified");
     });
 
     $('#filter-btn').click(function() {
@@ -76,11 +90,6 @@ $(document).ready(function() {
                 else{
                    $(this).show();
                 }
-                console.log(data[0].indexOf(id) , data[1].indexOf(name)  
-                , data[2].indexOf(type1) , data[3].indexOf(type2) , data[4].indexOf(total)
-                , data[5].indexOf(hp) , data[6].indexOf(attack) , data[7].indexOf(defense)
-                ,data[8].indexOf(spattack) , data[9].indexOf(spdefense) , data[10].indexOf(speed)
-                , data[11].indexOf(generation) ,data[12].indexOf(legendary));
                 
             }   
             

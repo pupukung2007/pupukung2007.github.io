@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bootstrap-4.2.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="jquery-3.3.1.min.js"></script>
     <script src="myscript.js"></script>
 </head>
@@ -38,230 +39,226 @@
     </section>
     <!--Normal Search-->
     <section class="normal-search">
-        <form>
-            <div class="row">
+        <div class="row">
 
-                <div class="col-auto">
-                    <label class="label" for="input-text">
-                        <i class="fas fa-search">Search</i>
-                    </label>
-                </div>
-
-                <div class="col-auto">
-                    <p>
-                        <input class="input is-rounded" type="text" id="input-text" placeholder="Search for...">
-                    </p>
-                </div>
-
-                <div class="col-auto">
-                    <a href="#" id="search-btn" class="btn btn-success">
-                        Search
-                    </a>
-                </div>
-
-                <div class="col-auto">
-                    <a href="#" id="advanced-btn" class="btn btn-danger">
-                        Advanced Search
-                    </a>
-                </div>
-
+            <div class="col-auto">
+                <label class="label" for="input-text">
+                    <i class="fas fa-search">Search</i>
+                </label>
             </div>
-        </form>
+
+            <div class="col-auto">
+                <p>
+                    <input class="input is-rounded" type="text" id="input-text" placeholder="Search for...">
+                </p>
+            </div>
+
+            <div class="col-auto">
+                <button id="search-btn" class="btn btn-success">
+                    Search
+                </button>
+            </div>
+
+            <div class="col-auto">
+                <button id="advanced-btn" class="btn btn-danger">
+                    Advanced Search
+                </button>
+            </div>
+
+        </div>
 
     </section>
 
     <!-- Advanced Search-->
     <section class="section advanced-search" style="border-style : solid;border-color: crimson;display : none;">
-        <form>
-            <!--Name and ID Selector-->
-            <div class="row">
-                <div class="col-auto">
-                    <label for="input-name">Pokemon Name:</label>
-                </div>
-                <div class="col-auto">
-                    <p>
-                        <input type="text" id="input-name" >
-                    </p>
-                </div>
-
-                <div class="col-auto">
-                    <label for="input-id">Pokemon ID:</label>
-                </div>
-                <div class="col-auto">
-                    <p>
-                        <input type="text" id="input-id">
-                    </p>
-                </div>
+        <!--Name and ID Selector-->
+        <div class="row">
+            <div class="col-auto">
+                <label for="input-name">Pokemon Name:</label>
+            </div>
+            <div class="col-auto">
+                <p>
+                    <input type="text" id="input-name">
+                </p>
             </div>
 
-            <!--Type Selector-->
-            <div class="row">
-                <div class="col-auto">
-                    <div class="label">
-                        <label class="label" for="dropdown-type1">
-                            Type1:
-                        </label>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle " type="button" id="dropdown-type1"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Not Specified</button>
-                        <div class="dropdown-menu" id="type1-content" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item type1-item" href="#">Not Specified</a>
-                            <a class="dropdown-item type1-item" href="#">Normal</a>
-                            <a class="dropdown-item type1-item" href="#">Fire</a>
-                            <a class="dropdown-item type1-item" href="#">Fighting</a>
-                            <a class="dropdown-item type1-item" href="#">Water</a>
-                            <a class="dropdown-item type1-item" href="#">Flying</a>
-                            <a class="dropdown-item type1-item" href="#">Grass</a>
-                            <a class="dropdown-item type1-item" href="#">Poison</a>
-                            <a class="dropdown-item type1-item" href="#">Electric</a>
-                            <a class="dropdown-item type1-item" href="#">Ground</a>
-                            <a class="dropdown-item type1-item" href="#">Psychic</a>
-                            <a class="dropdown-item type1-item" href="#">Rock</a>
-                            <a class="dropdown-item type1-item" href="#">Ice</a>
-                            <a class="dropdown-item type1-item" href="#">Bug</a>
-                            <a class="dropdown-item type1-item" href="#">Dragon</a>
-                            <a class="dropdown-item type1-item" href="#">Ghost</a>
-                            <a class="dropdown-item type1-item" href="#">Dark</a>
-                            <a class="dropdown-item type1-item" href="#">Steel</a>
-                            <a class="dropdown-item type1-item" href="#">Fairy</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-auto">&nbsp;</div>
-                <div class="col-auto">
-                    <div class="label">
-                        <label class="label" for="dropdown-type2">
-                            Type2:
-                        </label>
-                    </div>
-                </div>
+            <div class="col-auto">
+                <label for="input-id">Pokemon ID:</label>
+            </div>
+            <div class="col-auto">
+                <p>
+                    <input type="text" id="input-id">
+                </p>
+            </div>
+        </div>
 
-                <div class="col-auto">
-                    <div class="dropdown">
-                        <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdown-type2"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Not Specified</button>
-                        <div class="dropdown-menu" id="type2-content" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item type2-item" href="#">Not Specified</a>
-                            <a class="dropdown-item type2-item" href="#">None</a>
-                            <a class="dropdown-item type2-item" href="#">Normal</a>
-                            <a class="dropdown-item type2-item" href="#">Fire</a>
-                            <a class="dropdown-item type2-item" href="#">Fighting</a>
-                            <a class="dropdown-item type2-item" href="#">Water</a>
-                            <a class="dropdown-item type2-item" href="#">Flying</a>
-                            <a class="dropdown-item type2-item" href="#">Grass</a>
-                            <a class="dropdown-item type2-item" href="#">Poison</a>
-                            <a class="dropdown-item type2-item" href="#">Electric</a>
-                            <a class="dropdown-item type2-item" href="#">Ground</a>
-                            <a class="dropdown-item type2-item" href="#">Psychic</a>
-                            <a class="dropdown-item type2-item" href="#">Rock</a>
-                            <a class="dropdown-item type2-item" href="#">Ice</a>
-                            <a class="dropdown-item type2-item" href="#">Bug</a>
-                            <a class="dropdown-item type2-item" href="#">Dragon</a>
-                            <a class="dropdown-item type2-item" href="#">Ghost</a>
-                            <a class="dropdown-item type2-item" href="#">Dark</a>
-                            <a class="dropdown-item type2-item" href="#">Steel</a>
-                            <a class="dropdown-item type2-item" href="#">Fairy</a>
-                        </div>
-                    </div>
+        <!--Type Selector-->
+        <div class="row">
+            <div class="col-auto">
+                <div class="label">
+                    <label class="label" for="dropdown-type1">
+                        Type1:
+                    </label>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-auto">
-                    <label for="input-generation">Generation: </label>
-                </div>
-                <div class="col-auto">
-                    <input type="text" id="input-generation">
-                </div>
-                <div class="col-auto">
-                    <label for="input-legendary">Is it a Legendary Pokemon? </label>
-                </div>
+            <div class="col-auto">
                 <div class="dropdown">
-                    <button class="btn  btn-primary dropdown-toggle " type="button" id="input-legendary"
+                    <button class="btn btn-primary dropdown-toggle " type="button" id="dropdown-type1"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Not Specified</button>
-                    <div class="dropdown-menu" id="legendary-content" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item legendary-item" href="#">Not Specified</a>
-                        <a class="dropdown-item legendary-item" href="#">Yes</a>
-                        <a class="dropdown-item legendary-item" href="#">No</a>
+                    <div class="dropdown-menu" id="type1-content" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item type1-item" href="#">Not Specified</a>
+                        <a class="dropdown-item type1-item" href="#">Normal</a>
+                        <a class="dropdown-item type1-item" href="#">Fire</a>
+                        <a class="dropdown-item type1-item" href="#">Fighting</a>
+                        <a class="dropdown-item type1-item" href="#">Water</a>
+                        <a class="dropdown-item type1-item" href="#">Flying</a>
+                        <a class="dropdown-item type1-item" href="#">Grass</a>
+                        <a class="dropdown-item type1-item" href="#">Poison</a>
+                        <a class="dropdown-item type1-item" href="#">Electric</a>
+                        <a class="dropdown-item type1-item" href="#">Ground</a>
+                        <a class="dropdown-item type1-item" href="#">Psychic</a>
+                        <a class="dropdown-item type1-item" href="#">Rock</a>
+                        <a class="dropdown-item type1-item" href="#">Ice</a>
+                        <a class="dropdown-item type1-item" href="#">Bug</a>
+                        <a class="dropdown-item type1-item" href="#">Dragon</a>
+                        <a class="dropdown-item type1-item" href="#">Ghost</a>
+                        <a class="dropdown-item type1-item" href="#">Dark</a>
+                        <a class="dropdown-item type1-item" href="#">Steel</a>
+                        <a class="dropdown-item type1-item" href="#">Fairy</a>
                     </div>
                 </div>
             </div>
-
-            <hr>
-            <!--Stat Selector-->
-            <div class="row">
-                <div class="col-auto">
-                    <label for="input-total">Total Stat: </label>
-                </div>
-                <div class="col-auto">
-                    <input type="text" id="input-total">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-auto">
-                    <label for="input-hp">HP: </label>
-                </div>
-                <div class="col-auto">
-                    <input type="text" id="input-hp">
-                </div>
-                <div class="col-auto">
-                    <label for="input-attack">Attack: </label>
-                </div>
-                <div class="col-auto">
-                    <input type="text" id="input-attack">
-                </div>
-                <div class="col-auto">
-                    <label for="input-defense">Defense: </label>
-                </div>
-                <div class="col-auto">
-                    <input type="text" id="input-defense">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-auto">
-                    <label for="input-sp-attack">Sp.Attack: </label>
-                </div>
-                <div class="col-auto">
-                    <input type="text" id="input-sp-attack">
-                </div>
-                <div class="col-auto">
-                    <label for="input-sp-defense">Sp.Defense: </label>
-                </div>
-                <div class="col-auto">
-                    <input type="text" id="input-sp-defense">
-                </div>
-                <div class="col-auto">
-                    <label for="input-speed">Speed: </label>
-                </div>
-                <div class="col-auto">
-                    <input type="text" id="input-speed">
+            <div class="col-auto">&nbsp;</div>
+            <div class="col-auto">
+                <div class="label">
+                    <label class="label" for="dropdown-type2">
+                        Type2:
+                    </label>
                 </div>
             </div>
 
-            <!--Advanced Search Button-->
-            <div class="row">
-                <div class="auto-col">
-                    <a href="#" class="btn btn-warning" id="filter-btn">Search</a>
+            <div class="col-auto">
+                <div class="dropdown">
+                    <button class="btn  btn-primary dropdown-toggle " type="button" id="dropdown-type2"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Not Specified</button>
+                    <div class="dropdown-menu" id="type2-content" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item type2-item" href="#">Not Specified</a>
+                        <a class="dropdown-item type2-item" href="#">None</a>
+                        <a class="dropdown-item type2-item" href="#">Normal</a>
+                        <a class="dropdown-item type2-item" href="#">Fire</a>
+                        <a class="dropdown-item type2-item" href="#">Fighting</a>
+                        <a class="dropdown-item type2-item" href="#">Water</a>
+                        <a class="dropdown-item type2-item" href="#">Flying</a>
+                        <a class="dropdown-item type2-item" href="#">Grass</a>
+                        <a class="dropdown-item type2-item" href="#">Poison</a>
+                        <a class="dropdown-item type2-item" href="#">Electric</a>
+                        <a class="dropdown-item type2-item" href="#">Ground</a>
+                        <a class="dropdown-item type2-item" href="#">Psychic</a>
+                        <a class="dropdown-item type2-item" href="#">Rock</a>
+                        <a class="dropdown-item type2-item" href="#">Ice</a>
+                        <a class="dropdown-item type2-item" href="#">Bug</a>
+                        <a class="dropdown-item type2-item" href="#">Dragon</a>
+                        <a class="dropdown-item type2-item" href="#">Ghost</a>
+                        <a class="dropdown-item type2-item" href="#">Dark</a>
+                        <a class="dropdown-item type2-item" href="#">Steel</a>
+                        <a class="dropdown-item type2-item" href="#">Fairy</a>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="col-auto">
+                <label for="input-generation">Generation: </label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="input-generation">
+            </div>
+            <div class="col-auto">
+                <label for="input-legendary">Is it a Legendary Pokemon? </label>
+            </div>
+            <div class="dropdown">
+                <button class="btn  btn-primary dropdown-toggle " type="button" id="input-legendary"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Not Specified</button>
+                <div class="dropdown-menu" id="legendary-content" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item legendary-item" href="#">Not Specified</a>
+                    <a class="dropdown-item legendary-item" href="#">Yes</a>
+                    <a class="dropdown-item legendary-item" href="#">No</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        <!--Stat Selector-->
+        <div class="row">
+            <div class="col-auto">
+                <label for="input-total">Total Stat: </label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="input-total">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                <label for="input-hp">HP: </label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="input-hp">
+            </div>
+            <div class="col-auto">
+                <label for="input-attack">Attack: </label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="input-attack">
+            </div>
+            <div class="col-auto">
+                <label for="input-defense">Defense: </label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="input-defense">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-auto">
+                <label for="input-sp-attack">Sp.Attack: </label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="input-sp-attack">
+            </div>
+            <div class="col-auto">
+                <label for="input-sp-defense">Sp.Defense: </label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="input-sp-defense">
+            </div>
+            <div class="col-auto">
+                <label for="input-speed">Speed: </label>
+            </div>
+            <div class="col-auto">
+                <input type="text" id="input-speed">
+            </div>
+        </div>
+
+        <!--Advanced Search Button-->
+        <div class="row">
+            <div class="auto-col">
+                <button class="btn btn-warning" id="filter-btn">Search</button>
+            </div>
+        </div>
 
 
 
-        </form>
     </section>
 
     <!--Data Table-->
     <section>
         <table class="table" id="pokemon-table">
             <thead style="font-size : 50px;">
-                Original Source File: 
+                Original Source File:
                 <a href="https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6">
                     https://gist.github.com/armgilles/194bcff35001e7eb53a2a8b441e8b2c6
                 </a>
-             </thead>
+            </thead>
             <thead id="pokemon-head">
                 <th>ID</th>
                 <th>Name</th>
